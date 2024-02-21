@@ -1,0 +1,54 @@
+{
+    "name": "mermaid",
+    "displayName": "Mermaid",
+    "description": "Mermaid language support and syntax highlight",
+    "version": "1.0.0",
+    "publisher": "CatBraaain",
+    "license": "MIT",
+    "engines": {
+        "vscode": "^1.19.0"
+    },
+    "contributes": {
+        "languages": [
+            {
+                "id": "mermaid",
+                "aliases": [
+                    "Mermaid",
+                    "mermaid"
+                ],
+                "extensions": [
+                    ".mmd",
+                    ".mermaid"
+                ],
+                "configuration": "./mermaid-language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "mermaid",
+                "scopeName": "source.mermaid",
+                "path": "./syntaxes/mermaid.tmLanguage.json"
+            },
+            {
+                "injectTo": [
+                    "text.html.markdown"
+                ],
+                "scopeName": "markdown.mermaid.codeblock",
+                "path": "./syntaxes/markdown.mermaid.tmLanguage.json",
+                "embeddedLanguages": {
+                    "meta.embedded.block.mermaid": "mermaid"
+                }
+            },
+            {
+                "injectTo": [
+                    "text.html.derivative"
+                ],
+                "scopeName": "html.mermaid.codeblock",
+                "path": "./syntaxes/html.mermaid.tmLanguage.json",
+                "embeddedLanguages": {
+                    "meta.embedded.block.mermaid": "mermaid"
+                }
+            }
+        ]
+    }
+}
