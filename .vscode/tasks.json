@@ -1,0 +1,11 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "npm",
+            "script": "yaml2json",
+            "problemMatcher": [],
+            "label": "npm: yaml2json"
+        }
+    ]
+}

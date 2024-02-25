@@ -27,14 +27,14 @@
             {
                 "language": "mermaid",
                 "scopeName": "source.mermaid",
-                "path": "./syntaxes/mermaid.tmLanguage.json"
+                "path": "./out/syntaxes/mermaid.tmLanguage.json"
             },
             {
                 "injectTo": [
                     "text.html.markdown"
                 ],
-                "scopeName": "markdown.mermaid.codeblock",
-                "path": "./syntaxes/markdown.mermaid.tmLanguage.json",
+                "scopeName": "text.html.markdown.mermaid.codeblock",
+                "path": "./out/syntaxes/markdown.mermaid.tmLanguage.json",
                 "embeddedLanguages": {
                     "meta.embedded.block.mermaid": "mermaid"
                 }
@@ -43,12 +43,21 @@
                 "injectTo": [
                     "text.html.derivative"
                 ],
-                "scopeName": "html.mermaid.codeblock",
-                "path": "./syntaxes/html.mermaid.tmLanguage.json",
+                "scopeName": "text.html.mermaid.codeblock",
+                "path": "./out/syntaxes/html.mermaid.tmLanguage.json",
                 "embeddedLanguages": {
                     "meta.embedded.block.mermaid": "mermaid"
                 }
             }
         ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run yaml2json",
+        "yaml2json": "node build/yaml2json.js"
+    },
+    "dependencies": {
+        "fs-extra": "^11.2.0",
+        "js-yaml": "^4.1.0",
+        "yaml-import": "^2.0.0"
     }
 }
