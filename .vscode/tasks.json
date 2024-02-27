@@ -3,9 +3,13 @@
     "tasks": [
         {
             "type": "npm",
-            "script": "yaml2json",
-            "problemMatcher": [],
-            "label": "npm: yaml2json"
+            "script": "watch",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "runOptions": {
+                "runOn": "folderOpen"
+            }
         }
     ]
 }

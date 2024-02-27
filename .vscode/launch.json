@@ -4,7 +4,6 @@
             "name": "Extension",
             "type": "extensionHost",
             "request": "launch",
-            "preLaunchTask": "npm: yaml2json",
             "runtimeExecutable": "${execPath}",
             "args": [
                 "${workspaceFolder}/tests",
